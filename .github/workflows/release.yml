@@ -1,11 +1,10 @@
 name: Release
 
 on:
-  workflow_run:
-    workflows: [ "Run Tests" ]
-    branches: [ master, next ]
-    types: 
-      - completed
+  push:
+    branches: 
+      - master
+      - beta
 
 jobs:
   release:
